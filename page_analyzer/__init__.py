@@ -1,2 +1,2 @@
-from page_analyzer import app
-__all__ = ('page_analyzer.app')
+from page_analyzer.app import app
+__all__ = ('page_analyzer.app.app')
