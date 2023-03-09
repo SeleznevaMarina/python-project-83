@@ -19,18 +19,27 @@
         </nav>
     </header>
 
-    <div class="container mt-3 border  p-5 rounded-3 bg-light" style="text-align: center>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <h1 class="display-3">Анализатор страниц</h1>
-                <h3 class="lead">Бесплатно проверяйте сайты на SEO пригодность</h3>
-                <form class="d-flex" role="search" action="/urls">
-                <input class="form-control me-2" type="search" placeholder="https://example.com" value="" aria-label="Search">
-                <button class="btn btn-primary btn-lg" data-bs-theme="dark" type="submit">Проверить</button>
-            </form>
-            </div>
-        </nav>
-    </div>
-
-    </body>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>first_name</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for url in urls %}
+      <tr>
+        <td>
+          {{ url }}
+        </td>
+        <td>
+          <a href="/urls/{{ url.id }}">{{ url.name }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+  </div>
+  </body>
 </html>
