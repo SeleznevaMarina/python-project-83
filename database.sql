@@ -1,5 +1,5 @@
-CREATE TABLE courses (
+CREATE TABLE urls (
     id bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    name varchar(255),
+    name varchar(255) NOT NULL UNIQUE,
     created_a timestamp
 );
